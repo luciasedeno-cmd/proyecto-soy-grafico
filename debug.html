@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Rápido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>✨ Test de Personalidad</h1>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <p class="progress-text"><span id="currentQuestion">1</span> de <span id="totalQuestions">50</span></p>
+        </div>
+
+        <main class="main-content">
+            <section id="startScreen" class="screen active">
+                <div class="start-content">
+                    <h2>¡Bienvenido!</h2>
+                    <p>Haz clic en comenzar para iniciar el test</p>
+                    <button class="btn btn-primary" onclick="startTest()">Comenzar Test</button>
+                </div>
+            </section>
+
+            <section id="questionsScreen" class="screen">
+                <div class="question-container">
+                    <h2 id="questionText"></h2>
+                    <div class="scale-container">
+                        <div class="scale-labels">
+                            <span>Muy en desacuerdo</span>
+                            <span>Muy de acuerdo</span>
+                        </div>
+                        <div class="scale-buttons" id="scaleButtons"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resultsScreen" class="screen">
+                <div class="results-content">
+                    <h2>Resultados</h2>
+                    <div class="personality-type">
+                        <h3>Tu Tipo de Personalidad</h3>
+                        <div class="type-name" id="personalityName"></div>
+                        <div class="type-description" id="personalityDesc"></div>
+                    </div>
+                    <div class="traits-container" id="traitsContainer"></div>
+                    <div class="description-container" id="descriptionContainer"></div>
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="downloadResults()">📥 Descargar</button>
+                        <button class="btn btn-primary" onclick="restartTest()">🔄 Reiniciar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="test.js"></script>
+    <script>
+        // Debug
+        console.log("HTML página de prueba cargada");
+        console.log("Número de preguntas:", questions ? questions.length : "no definidas");
+    </script>
+</body>
+</html>
+

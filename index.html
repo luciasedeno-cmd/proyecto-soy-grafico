@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Personalidad - Los Cinco Grandes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>✨ Descubre Tu Personalidad</h1>
+            <p class="subtitle">Test de los Cinco Grandes - Modelo Científico</p>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <p class="progress-text"><span id="currentQuestion">1</span> de <span id="totalQuestions">50</span></p>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Start Screen -->
+            <section id="startScreen" class="screen active">
+                <div class="start-content">
+                    <div class="welcome-icon">🧠</div>
+                    <h2>Bienvenido/a</h2>
+                    <p>Este test evalúa tu personalidad basándose en el modelo de los Cinco Grandes, el más respaldado científicamente.</p>
+
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <span class="icon">🌟</span>
+                            <h3>Apertura</h3>
+                            <p>Creatividad e imaginación</p>
+                        </div>
+                        <div class="info-card">
+                            <span class="icon">✅</span>
+                            <h3>Responsabilidad</h3>
+                            <p>Organización y disciplina</p>
+                        </div>
+                        <div class="info-card">
+                            <span class="icon">❤️</span>
+                            <h3>Amabilidad</h3>
+                            <p>Empatía y cooperación</p>
+                        </div>
+                        <div class="info-card">
+                            <span class="icon">😌</span>
+                            <h3>Estabilidad</h3>
+                            <p>Resiliencia emocional</p>
+                        </div>
+                        <div class="info-card">
+                            <span class="icon">🎭</span>
+                            <h3>Extroversión</h3>
+                            <p>Sociabilidad y energía</p>
+                        </div>
+                    </div>
+
+                    <div class="start-info">
+                        <p>⏱️ <strong>5-10 minutos</strong> | 📊 <strong>50 preguntas</strong> | 🎯 <strong>Resultados inmediatos</strong></p>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="startTest()">Comenzar Test</button>
+                </div>
+            </section>
+
+            <!-- Questions Screen -->
+            <section id="questionsScreen" class="screen">
+                <div class="question-container">
+                    <h2 id="questionText"></h2>
+                    <div class="scale-container">
+                        <div class="scale-labels">
+                            <span>Muy en desacuerdo</span>
+                            <span>Muy de acuerdo</span>
+                        </div>
+                        <div class="scale-buttons" id="scaleButtons"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="resultsScreen" class="screen">
+                <div class="results-content">
+                    <h2>Tu Perfil de Personalidad</h2>
+
+                    <div class="personality-type" id="personalityType"></div>
+
+                    <div class="radar-container">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+
+                    <div class="traits-container" id="traitsContainer"></div>
+
+                    <div class="description-container" id="descriptionContainer"></div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" onclick="downloadResults()">📥 Descargar Resultados</button>
+                        <button class="btn btn-primary" onclick="restartTest()">🔄 Hacer Otro Test</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
+
+
